@@ -6,11 +6,12 @@
 
 -- schedule 테이블
 CREATE TABLE schedules (
-    schedule_id INT PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     writer VARCHAR(45) NOT NULL,
     todo VARCHAR(45) NOT NULL,
     password INT,
-    last_update DATETIME NOT NULL,
+    create_at DATE NOT NULL,
+    modified_at DATE,
 --     FOREIGN KEY (user_id) REFERENCES user(user_id)
 );
 
@@ -19,22 +20,22 @@ CREATE TABLE schedules (
 -- (1, 'kim');
 
 -- 일정 생성 query
-INSERT INTO schedules (schedule_id, writer, todo, password, "last_update") VALUES
-(1, 'kim', '공부하기', 1234, '2024-10-31 17:18:00');
+INSERT INTO schedules (writer, todo, password, "create_at") VALUES
+('kim', '공부하기', 1234, '2024-10-31 17:18:00');
 
 -- 전체 일정 조회 query
-SELECT schedule_id, writer, todo, last_update
+SELECT id, writer, todo, create_at
 FROM schedules;
 
 -- 선택 일정 조회 query
-SELECT schedule_id, writer, todo, last_update
+SELECT schedule_id, writer, todo, create_at
 FROM schedules
 WHERE schedule_id = 1;
 
 -- 선택 일정 수정 query
 UPDATE schedules
 SET todo = '장보기'
-WHERE schedule_id = 1;
+WHERE id = 1;
 
 -- 선택 일정 삭제 query
-DELETE FROM schedules WHERE schedule_id = 1;
+DELETE FROM schedules WHERE id = 1;
