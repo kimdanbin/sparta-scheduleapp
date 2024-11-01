@@ -61,6 +61,13 @@
 ---
 
 ## 2. 전체 일정 조회
+
+| Method | URL        |
+|:------:|------------|
+|  POST  | /schedules |
+
+<br/>
+
 ### request
 ```json=
 {
@@ -109,6 +116,13 @@
 ---
 
 ## 3. 선택 일정 조회
+
+| Method | URL                     |
+|:------:|-------------------------|
+|  POST  | /schedules/{scheduleId} |
+
+<br/>
+
 ### request
 ```json=
 {
@@ -139,6 +153,13 @@
 ---
 
 ## 4. 선택 일정 수정
+
+| Method | URL                     |
+|:------:|-------------------------|
+|  POST  | /schedules/{scheduleId} |
+
+<br/>
+
 ### request
 ```json=
 {
@@ -174,6 +195,13 @@
 ---
 
 ## 5. 선택 일정 삭제
+
+| Method | URL                     |
+|:------:|-------------------------|
+|  POST  | /schedules/{scheduleId} |
+
+<br/>
+
 ### request
 ```json=
 { 
